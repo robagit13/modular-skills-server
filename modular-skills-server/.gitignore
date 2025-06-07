@@ -1,0 +1,13 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+
+# VSCode settings (אם לא רוצים לשתף הגדרות עורך)
+.vscode/
