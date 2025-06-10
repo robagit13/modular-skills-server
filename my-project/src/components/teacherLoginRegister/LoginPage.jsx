@@ -47,9 +47,10 @@ const LoginContent = () => {
       setIsLoading(false);
       return;
     }
+    const apiUrl = import.meta.env.VITE_API_URL;
      // Send login request to backend
     try {
-      const response = await fetch('http://localhost:5000/api/teachers/login', {
+      const response = await fetch('${apiUrl}/api/teachers/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),

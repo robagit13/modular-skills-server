@@ -23,12 +23,12 @@ const DashboardOverview = () => {
 
   // State for loading indicator
   const [loading, setLoading] = useState(true);
-
+ const apiUrl = import.meta.env.VITE_API_URL;
   useEffect(() => {
     // Fetch dashboard summary from backend
     const fetchSummary = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/teacher/${user?.id}/summary`);
+        const res = await fetch(`${apiUrl}/api/teacher/${user?.id}/summary`);
         const data = await res.json();
         setSummary(data); // Update summary state with fetched data
       } catch (error) {
